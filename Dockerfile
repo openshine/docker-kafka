@@ -1,11 +1,11 @@
-FROM anapsix/alpine-java
+FROM openjdk:8-jre
 
 ARG kafka_version=0.10.2.0
 ARG scala_version=2.12
 
 MAINTAINER ssaavedra
 
-RUN apk add --update unzip wget curl docker jq coreutils
+RUN apt-get update && apt-get install -y unzip wget curl jq && rm -rf /var/lib/apt/lists/*
 
 ENV KAFKA_VERSION=$kafka_version SCALA_VERSION=$scala_version
 ADD download-kafka.sh /tmp/download-kafka.sh
