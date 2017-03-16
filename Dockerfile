@@ -3,7 +3,7 @@ FROM anapsix/alpine-java
 ARG kafka_version=0.10.2.0
 ARG scala_version=2.12
 
-MAINTAINER wurstmeister
+MAINTAINER ssaavedra
 
 RUN apk add --update unzip wget curl docker jq coreutils
 
