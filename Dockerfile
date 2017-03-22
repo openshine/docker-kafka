@@ -5,7 +5,7 @@ ARG scala_version=2.12
 
 MAINTAINER ssaavedra
 
-RUN apt-get update && apt-get install -y unzip wget curl jq && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y unzip wget curl jq net-tools && rm -rf /var/lib/apt/lists/*
 
 ENV KAFKA_VERSION=$kafka_version SCALA_VERSION=$scala_version
 ADD download-kafka.sh /tmp/download-kafka.sh
