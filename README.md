@@ -1,6 +1,6 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/wurstmeister/kafka.svg)](https://hub.docker.com/r/wurstmeister/kafka/)
-[![Docker Stars](https://img.shields.io/docker/stars/wurstmeister/kafka.svg)](https://hub.docker.com/r/wurstmeister/kafka/)
-[![](https://badge.imagelayers.io/wurstmeister/kafka:latest.svg)](https://imagelayers.io/?images=wurstmeister/kafka:latest)
+[![Docker Pulls](https://img.shields.io/docker/pulls/openshine/kafka.svg)](https://hub.docker.com/r/openshine/kafka/)
+[![Docker Stars](https://img.shields.io/docker/stars/openshine/kafka.svg)](https://hub.docker.com/r/openshine/kafka/)
+[![](https://badge.imagelayers.io/openshine/kafka:latest.svg)](https://imagelayers.io/?images=openshine/kafka:latest)
 
 kafka-docker
 ============
@@ -8,6 +8,13 @@ kafka-docker
 Dockerfile for [Apache Kafka](http://kafka.apache.org/)
 
 The image is available directly from [Docker Hub](https://hub.docker.com/r/wurstmeister/kafka/)
+
+## Differences from wurstmeister/kafka
+
+This image and Dockerfile is based on wurstmeister/kafka, but is
+instead based off openjdk:8-jre image instead of an alpine-openjdk
+image. Alpine uses musl and OpenJDK under musl does not enjoy the same
+level of support as OpenJDK under glibc for many purposes.
 
 ## Pre-Requisites
 
