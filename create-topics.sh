@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # If no topics are to be created, just exit
-if [[ -n $KAFKA_CREATE_TOPICS ]]; then
+if [[ -z $KAFKA_CREATE_TOPICS ]]; then
     exit
 fi
  
