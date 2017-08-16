@@ -1,6 +1,6 @@
 FROM openjdk:8-jre
 
-ARG kafka_version=0.10.2.0
+ARG kafka_version=0.11.0.0
 ARG scala_version=2.12
 
 MAINTAINER ssaavedra
