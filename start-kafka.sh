@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Initial checks
+# If server.properties is missing newline character at the end we add it to avoid appending to an existing line.
+if [ -f "$KAFKA_HOME/config/server.properties" ]; then
+    [ "$(tail -c 1 "$KAFKA_HOME/config/server.properties")" ] && echo "" >> "$KAFKA_HOME/config/server.properties"
+else
+    echo "WARNING: server.properties not found: $KAFKA_HOME/config/server.properties"
+fi
+
 if [[ -z "$KAFKA_PORT" ]]; then
     export KAFKA_PORT=9092
 fi
